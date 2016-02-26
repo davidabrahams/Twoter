@@ -1,0 +1,14 @@
+<article>
+
+<div class="twote_text">{{text}}</div>
+<br>
+<div class="twote_username">
+
+	{{#if _creator.facebook.id}}
+	    {{_creator.facebook.name}}
+	{{else}}
+	    {{_creator.username}}
+	{{/if}}
+</div>
+
+</article>
