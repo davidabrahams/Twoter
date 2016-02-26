@@ -41,7 +41,9 @@ app.use('/users', users);
 
 configure_passport(passport);
 
-mongoose.connect('mongodb://localhost/twoter');
+var mongoURI = process.env.MONGOURI || 'mongodb://localhost/twoter'
+
+mongoose.connect(mongoURI);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
